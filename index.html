@@ -1,51 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - mGame</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background-color: #f9f9f9; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 5px solid #e74c3c; }
-        h1 { color: #c0392b; }
-        h2 { color: #2c3e50; margin-top: 25px; border-left: 4px solid #e74c3c; padding-left: 10px; }
-        .highlight { background: #fff3cd; padding: 2px 5px; border-radius: 3px; }
-        .footer { margin-top: 30px; font-size: 0.9em; color: #777; text-align: center; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions - mGAME</title>
+  <style>
+    :root{
+      --bg:#0f1220;
+      --card:#171b2e;
+      --card2:#1d2340;
+      --text:#f4f7ff;
+      --muted:#a8b0d3;
+      --accent:#ff4f9a;
+      --accent2:#7c5cff;
+      --line:rgba(255,255,255,.08);
+      --good:#4be3a1;
+      --warn:#ffcc66;
+      --bad:#ff7272;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(124,92,255,.14), transparent 30%),
+        radial-gradient(circle at left, rgba(255,79,154,.10), transparent 25%),
+        linear-gradient(180deg, #0b0e18 0%, var(--bg) 100%);
+      color:var(--text);
+      line-height:1.7;
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:32px 18px 64px;
+    }
+    .hero{
+      background:linear-gradient(135deg, rgba(255,79,154,.14), rgba(124,92,255,.16));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 20px 50px rgba(0,0,0,.28);
+      margin-bottom:20px;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(32px, 5vw, 54px);
+      line-height:1.05;
+      letter-spacing:.2px;
+    }
+    .sub{
+      color:var(--muted);
+      margin:0;
+      max-width:72ch;
+    }
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--text);
+      font-size:14px;
+    }
+    .pill strong{color:var(--warn)}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .section{
+      background:rgba(23,27,46,.92);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px 22px 18px;
+      box-shadow:0 12px 30px rgba(0,0,0,.16);
+    }
+    h2{
+      margin:0 0 10px;
+      font-size:22px;
+      color:#fff;
+    }
+    p{margin:0 0 10px; color:var(--text)}
+    ul{
+      margin:10px 0 0 22px;
+      padding:0;
+      color:var(--text);
+    }
+    li{margin:8px 0}
+    .note{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:10px;
+    }
+    .accent{color:var(--good); font-weight:700}
+    .bad{color:var(--bad); font-weight:700}
+    .warn{color:var(--warn); font-weight:700}
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:center;
+    }
+    a{color:#bda7ff}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Terms and Conditions</h1>
-        <p>Welcome to <strong>mGame</strong>. By downloading or using the app, you agree to these terms.</p>
-
-        <h2>1. Eligibility</h2>
-        <p>Users must provide accurate information. Multiple accounts for a single user are strictly prohibited and may lead to a permanent ban.</p>
-
-        <h2>2. Points and Ranks</h2>
-        <ul>
-            <li>Points are earned by playing the game and successfully completing targets.</li>
-            <li>Users can upgrade ranks (e.g., Devil 2 requires 50 points) to unlock more features.</li>
-            <li>Ranks and points are stored in our database and linked to your profile.</li>
-        </ul>
-
-        <h2>3. Redemption Policy</h2>
-        <p>Points can be converted into <span class="highlight">Real Money, UPI transfers, or Gift Cards</span>. The conversion rate and minimum payout are decided by the admin and shown in the Redeem screen. Processing time may vary as per GST and banking rules.</p>
-
-        <h2>4. Referral & Team Commission</h2>
-        <p>Users earn a <span class="highlight">Lifetime Commission (e.g., 5% or 10%)</span> based on their team's activity. The exact percentage is subject to change by the admin. Fraudulent referrals will result in account termination.</p>
-
-        <h2>5. Ads and Rewards</h2>
-        <p>Watching video ads can grant extra time or double your current level points. Abuse of the ad system via scripts or third-party tools is forbidden.</p>
-
-        <h2>6. Account Termination</h2>
-        <p>We reserve the right to suspend or delete accounts that engage in cheating, hacking, or any activity that harms the mGame community.</p>
-
-        <h2>7. Changes to Terms</h2>
-        <p>Admin reserves the right to modify these terms at any time. Continued use of the app signifies your acceptance of the updated terms.</p>
-
-        <div class="footer">
-            &copy; 2024 mGame. Thank you for playing!
-        </div>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Terms & Conditions</h1>
+      <p class="sub">
+        These Terms & Conditions govern your use of mGAME, including gameplay, points, ads, rewards, redemptions, account management, and all related services.
+      </p>
+      <div class="meta">
+        <span class="pill">App Name: <strong>mGAME</strong></span>
+        <span class="pill">Last Updated: <strong>02 Apr 2026</strong></span>
+        <span class="pill">Support: <strong>contact.feedback.store@gmail.com</strong></span>
+      </div>
     </div>
+
+    <div class="grid">
+      <section class="section">
+        <h2>1. Acceptance of terms</h2>
+        <p>By installing, accessing, or using the App, you agree to these Terms, our Privacy Policy, and any rules shown inside the App.</p>
+      </section>
+
+      <section class="section">
+        <h2>2. Eligibility</h2>
+        <p>You must be legally allowed to use the App in your location. You may not use the App if you are barred by law, platform policy, or local regulations.</p>
+      </section>
+
+      <section class="section">
+        <h2>3. Account creation</h2>
+        <p>You must provide accurate information when creating or using an account. You are responsible for keeping your account details updated and secure.</p>
+      </section>
+
+      <section class="section">
+        <h2>4. Account responsibility</h2>
+        <p>You are responsible for all activity that happens under your account. Do not share your login or allow others to use your account in a way that breaks these Terms.</p>
+      </section>
+
+      <section class="section">
+        <h2>5. Points are in-app rewards</h2>
+        <p>Points are virtual rewards earned through gameplay, tasks, and rewarded ads. Points have no cash value until a redemption request is approved by us.</p>
+      </section>
+
+      <section class="section">
+        <h2>6. No guaranteed earnings</h2>
+        <p><span class="warn">We do not guarantee earnings, income, or any specific reward amount.</span> Rewards may vary and depend on gameplay, availability, eligibility, and successful review.</p>
+      </section>
+
+      <section class="section">
+        <h2>7. No purchase required</h2>
+        <p>Users are not required to make any purchase or payment to earn points or request rewards, unless clearly stated for a specific optional feature.</p>
+      </section>
+
+      <section class="section">
+        <h2>8. Not a financial service</h2>
+        <p>This App is not a bank, wallet, investment, lending, trading, or financial service platform. It is an entertainment-based gaming application.</p>
+      </section>
+
+      <section class="section">
+        <h2>9. Rewarded ads</h2>
+        <p>Watching a rewarded ad may increase points, unlock bonuses, or provide 2x points where shown in the App. Rewards are granted only when the ad is completed and recorded correctly.</p>
+      </section>
+
+      <section class="section">
+        <h2>10. Prohibited ad abuse</h2>
+        <p>You must not abuse ad rewards, use bots, click fraud, emulators, automation, proxies, fake devices, or repeated refresh methods to gain unfair points.</p>
+      </section>
+
+      <section class="section">
+        <h2>11. Redemption methods</h2>
+        <p>Available redemption methods may include UPI transfer, bank transfer, and Play Store gift card. We may add, remove, pause, or limit methods at any time.</p>
+      </section>
+
+      <section class="section">
+        <h2>12. Minimum redemption and processing</h2>
+        <p>Each redemption method may have a minimum point threshold, review time, and processing period. Processing time shown in the App is an estimate and may change.</p>
+      </section>
+
+      <section class="section">
+        <h2>13. Fees and deductions</h2>
+        <p>Where applicable, fees, taxes, GST, gateway charges, or processing deductions may be applied to a redemption. The final payout amount shown before confirmation is the amount you agree to receive.</p>
+      </section>
+
+      <section class="section">
+        <h2>14. Verification</h2>
+        <p>We may request verification of your identity, account, redemption details, or activity before approving a payout. Failure to complete verification may delay or block redemption.</p>
+      </section>
+
+      <section class="section">
+        <h2>15. Pending, approved, failed, or rejected redemptions</h2>
+        <p>Redemptions may remain pending, be approved, fail, or be rejected based on system checks, partner issues, incorrect details, policy violations, or suspicious activity.</p>
+      </section>
+
+      <section class="section">
+        <h2>16. Suspicious activity</h2>
+        <p>We may review or freeze points and redemptions if we see unusual patterns such as multiple accounts, fake traffic, duplicate devices, scripted gameplay, abnormal ad patterns, or rule violations.</p>
+      </section>
+
+      <section class="section">
+        <h2>17. Admin rights</h2>
+        <p>Admins may suspend, restrict, shadow-limit, or remove accounts, points, or redemption privileges where required to protect the App, users, or partners.</p>
+      </section>
+
+      <section class="section">
+        <h2>18. Fraud and abuse</h2>
+        <p>You must not tamper with points, exploit bugs, reverse engineer the App, use third-party cheats, fake ad views, or attempt to manipulate balances or redemptions.</p>
+      </section>
+
+      <section class="section">
+        <h2>19. Fraud consequences</h2>
+        <p><span class="bad">Any fraudulent or abusive activity may result in account suspension, permanent termination, and forfeiture of points or rewards.</span></p>
+      </section>
+
+      <section class="section">
+        <h2>20. External services</h2>
+        <p>The App may use Firebase, AdMob, Unity Ads, payout providers, and gift card partners. Their services may be subject to separate terms and policies.</p>
+      </section>
+
+      <section class="section">
+        <h2>21. Payments and payouts</h2>
+        <p>UPI, bank transfer, and gift card payouts are handled through internal or third-party systems. We are not responsible for delays caused by banks, networks, wallets, gift card issuers, or outages outside our control.</p>
+      </section>
+
+      <section class="section">
+        <h2>22. User information</h2>
+        <p>You must provide correct payout details. We are not responsible for money sent to the wrong UPI ID, bank account, or gift card destination because of incorrect information entered by you.</p>
+      </section>
+
+      <section class="section">
+        <h2>23. Gift cards</h2>
+        <p>Gift cards may be subject to issuer rules, expiry dates, region limits, activation rules, and availability. We do not control the terms of the gift card provider.</p>
+      </section>
+
+      <section class="section">
+        <h2>24. Taxes and legal compliance</h2>
+        <p>You are responsible for any taxes, reporting duties, or legal obligations that apply to rewards or payouts in your jurisdiction. Use of the App must follow applicable laws in India and elsewhere.</p>
+      </section>
+
+      <section class="section">
+        <h2>25. No gambling</h2>
+        <p>The App is intended for entertainment and reward-based gameplay only. It is not a gambling, betting, or wagering service.</p>
+      </section>
+
+      <section class="section">
+        <h2>26. Account deletion and termination</h2>
+        <p>You may delete your account if the App provides that option in the profile screen. We may also terminate or disable your account at any time for violations, fraud, or legal reasons.</p>
+      </section>
+
+      <section class="section">
+        <h2>27. Changes to the App</h2>
+        <p>We may modify gameplay, reward rules, ads, features, redemption methods, limits, or availability at any time without prior notice unless required by law.</p>
+      </section>
+
+      <section class="section">
+        <h2>28. No warranties</h2>
+        <p>The App is provided on an <span class="warn">"as is"</span> and <span class="warn">"as available"</span> basis. We do not guarantee uninterrupted service, error-free operation, or that all rewards or redemptions will always be available.</p>
+      </section>
+
+      <section class="section">
+        <h2>29. Limitation of liability</h2>
+        <p>To the fullest extent allowed by law, we are not liable for indirect, incidental, special, or consequential losses arising from use of the App, including lost points, failed redemptions, or service interruptions.</p>
+      </section>
+
+      <section class="section">
+        <h2>30. Indemnity</h2>
+        <p>You agree to protect and indemnify us against claims, losses, or damages caused by your misuse of the App, your violation of these Terms, or your breach of any law or third-party right.</p>
+      </section>
+
+      <section class="section">
+        <h2>31. Governing law and disputes</h2>
+        <p>These Terms are intended to be interpreted under applicable laws, including India-specific laws where applicable. Any dispute process may be handled through support first and then through legal channels if needed.</p>
+      </section>
+
+      <section class="section">
+        <h2>32. Contact and support</h2>
+        <p>For questions, complaints, suspensions, or redemption issues, contact at  <a href="mailto:contact.feedback.store@gmail.com.com">contact.feedback.store@gmail.com</a>.</p>
+      </section>
+
+      <section class="section">
+        <h2>33. Entire agreement</h2>
+        <p>These Terms, together with the Privacy Policy and any in-app rules, form the entire agreement between you and us for use of the App.</p>
+      </section>
+    </div>
+
+    <div class="footer">
+      By using the App, you agree to these Terms & Conditions.
+    </div>
+  </div>
 </body>
 </html>
