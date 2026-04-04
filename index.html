@@ -59,17 +59,19 @@
       gap:10px;
       margin-top:18px;
     }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:9px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--text);
-      font-size:14px;
-    }
+     .pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 50px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+  color: var(--muted);
+
+  /* FIX */
+  max-width: 100%;
+  word-break: break-all;
+}
     .pill strong{color:var(--warn)}
     .grid{
       display:grid;
